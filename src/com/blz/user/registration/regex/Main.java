@@ -10,17 +10,18 @@ public class Main {
         System.out.println("2.To Validate the Second name");
         System.out.println("3.To Validate the Email address");
         System.out.println("4.To Validate the Mobile Number");
+        System.out.println("5.To Validate the Password ");
         System.out.println("Enter the option to perform the operation");
         int checkOption = sc.nextInt();
 
         switch (checkOption) {
             case 1:
-                System.out.println("1.Enter the First name /Note: Name starts with Cap and has minimun 3 characters");
+                System.out.println("1.Enter the First name /Note: Name starts with Cap and has minimum 3 characters");
                 String firstName = sc.next();
                 userRegistration.validateFirstName(firstName);
                 break;
             case 2:
-                System.out.println("2.Enter the Last name /Note: Name starts with Cap and has minimun 3 characters");
+                System.out.println("2.Enter the Last name /Note: Name starts with Cap and has minimum 3 characters");
                 String lastName = sc.next();
                 userRegistration.validateLastName(lastName);
                 break;
@@ -32,10 +33,16 @@ public class Main {
             case 4:
                 System.out.println("4.Enter the Mobile number");
                 sc.nextLine();
-                String num =sc.nextLine();
+                String num = sc.nextLine();
                 userRegistration.validateMobileNumber(num);
                 break;
 
+            case 5:
+                System.out.println("5.Enter the Password /Note : Required minimum 8 characters");
+                sc.nextLine();
+                String password = sc.nextLine();
+                userRegistration.validatePassword(password);
+                break;
             default:
                 System.out.println("Please Enter valid option");
                 break;
