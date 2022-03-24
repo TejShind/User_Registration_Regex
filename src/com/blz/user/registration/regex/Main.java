@@ -38,7 +38,7 @@ public class Main {
                 break;
 
             case 5:
-                System.out.println("5.Enter the Password /Note : Required minimum 8 characters");
+                System.out.println("5.Enter the Password /Note : Required minimum 8 characters, 1 Upper case");
                 sc.nextLine();
                 String password = sc.nextLine();
                 userRegistration.validatePassword(password);
