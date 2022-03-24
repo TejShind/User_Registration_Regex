@@ -8,6 +8,7 @@ public class UserRegistration {
     public final String firstName = "^[A-Z]{1}[a-z]{2,}$";
     public final String lastName = ("^[A-Z]{1}[a-z]{3,}$");
     public final String email = "^[a-z]{3,}[1-9]{0,4}[@][a-z]{4,}[.][a-z]{2,3}$";
+    public final String mobileNumber = "^[0-9]{2}\s?[0-9]{10}$";//e.g 91 9919819801.
 
     public void validateFirstName(String enteredFirstName) {
         Pattern pattern = Pattern.compile(firstName);
@@ -35,6 +36,16 @@ public class UserRegistration {
             System.out.println("Entered email " + enteredEmail + " is valid");
         else
             System.out.println("email " + enteredEmail + " is invalid");
+
+    }
+
+    public void validateMobileNumber(String in) {
+        Pattern pattern = Pattern.compile(mobileNumber);
+        Matcher matcher = pattern.matcher(in);
+        if (matcher.matches())
+            System.out.println("Entered mobileNumber " + in + " is valid");
+        else
+            System.out.println("MobileNumber " + in + " is invalid");
 
     }
 }

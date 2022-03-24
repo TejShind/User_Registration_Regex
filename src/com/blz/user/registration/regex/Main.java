@@ -9,6 +9,7 @@ public class Main {
         System.out.println("1.To Validate the First name");
         System.out.println("2.To Validate the Second name");
         System.out.println("3.To Validate the Email address");
+        System.out.println("4.To Validate the Mobile Number");
         System.out.println("Enter the option to perform the operation");
         int checkOption = sc.nextInt();
 
@@ -28,6 +29,13 @@ public class Main {
                 String email = sc.next();
                 userRegistration.validateEmail(email);
                 break;
+            case 4:
+                System.out.println("4.Enter the Mobile number");
+                sc.nextLine();
+                String num =sc.nextLine();
+                userRegistration.validateMobileNumber(num);
+                break;
+
             default:
                 System.out.println("Please Enter valid option");
                 break;
