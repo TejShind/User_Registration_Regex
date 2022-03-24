@@ -1,2 +1,5 @@
 # User Registration bt using REGEX
-1)Welcome to the program.
+Welcome to the program.
+1.User need to enter a valid First Name.
+
+
