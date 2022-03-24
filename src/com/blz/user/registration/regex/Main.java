@@ -8,19 +8,25 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("1.To Validate the First name");
         System.out.println("2.To Validate the Second name");
+        System.out.println("3.To Validate the Email address");
         System.out.println("Enter the option to perform the operation");
-        int check = sc.nextInt();
-        System.out.println("Note: Name starts with Cap and has minimun 3 characters");
-        switch (check) {
+        int checkOption = sc.nextInt();
+
+        switch (checkOption) {
             case 1:
-                System.out.println("Enter the First name");
+                System.out.println("1.Enter the First name /Note: Name starts with Cap and has minimun 3 characters");
                 String firstName = sc.next();
                 userRegistration.validateFirstName(firstName);
                 break;
             case 2:
-                System.out.println("2.Enter the Last name");
+                System.out.println("2.Enter the Last name /Note: Name starts with Cap and has minimun 3 characters");
                 String lastName = sc.next();
                 userRegistration.validateLastName(lastName);
+                break;
+            case 3:
+                System.out.println("3.Enter the Email address");
+                String email = sc.next();
+                userRegistration.validateEmail(email);
                 break;
             default:
                 System.out.println("Please Enter valid option");
