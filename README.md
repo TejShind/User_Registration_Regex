@@ -6,3 +6,4 @@ Welcome to the program.
 4.Country code follow by space and 10 digit number. e.g 91 9919819801.
 5.Rule-1 Validating the password having minimum 8 characters.
 6.Rule-2 Should have at least one uppercase.
+7.Rule-3 Should have at least one numeric number.
