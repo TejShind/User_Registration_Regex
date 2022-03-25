@@ -8,11 +8,9 @@ public class UserRegistration {
     public final String firstName = "^[A-Z]{1}[a-z]{2,}$";
     public final String lastName = ("^[A-Z]{1}[a-z]{3,}$");
     public final String email = "^[a-z]{3,}[1-9]{0,4}[@][a-z]{4,}[.][a-z]{2,3}$";
-    public final String mobileNumber = "^[0-9]{2}\s?[0-9]{10}$";//e.g 91 9919819801.
-    //    public final String passWord = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*])[a-zA-Z1-9]{1}[a-zA-Z0-9]{7,}";
-    public final String passWord = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*():<>?]).{8,20}";
+    public final String mobileNumber = "^[0-9]{2}\s?[0-9]{10}$";//e.g 91 991981980
+    public final String passWord = "(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]*[@#$%_!^&*][0-9a-zA-Z]*";
 
-    // public final String passWord = "^[A-Za-z]{0,}[a-zA-Z1-9]{1}[@]{1}[a-zA-Z0-9]{7,}$";//Exactly one special character,minimum 8 characters,One uppercase character, One Numeric number
     public void validateFirstName(String enteredFirstName) {
         Pattern pattern = Pattern.compile(firstName);
         Matcher matcher = pattern.matcher(enteredFirstName);
@@ -61,4 +59,17 @@ public class UserRegistration {
             System.out.println("Password " + password + " is invalid ");
 
     }
+
+    public static void validateEmailsSampleList(String[] emails) {
+        for (int i = 0; i < emails.length; i++) {
+            Pattern pattern = Pattern.compile("([a-z]|[a-z+-.a-z0-9])+((@[^-]+[a-z+.a-z+.a-z])|(@[^-][a-z+.a-z]))");
+            Matcher matcher = pattern.matcher(emails[i]);
+            if (matcher.matches())
+                System.out.println(emails[i] + " : This Email id is valid");
+            else
+                System.out.println(emails[i] + " : This Email id is Invalid");
+        }
+    }
+
+
 }

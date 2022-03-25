@@ -8,3 +8,4 @@ Welcome to the program.
 6.Rule-2 Should have at least one uppercase.
 7.Rule-3 Should have at least one numeric number.
 8.Rule-4 Should have exact one special character.
+9.Should clear all email samples provided separately.
